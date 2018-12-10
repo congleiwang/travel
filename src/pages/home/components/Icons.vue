@@ -86,6 +86,7 @@ export default {
     height: 0
     padding-bottom: 50%
     background-color #ffffff
+    margin-top: .1rem
 
     .icons-icon
       position: relative
@@ -100,15 +101,14 @@ export default {
         left: 0
         top: 0
         right: 0
-        bottom: .44rem
+        bottom: .40rem
         -webkit-box-sizing: border-box
         -moz-box-sizing: border-box
         box-sizing: border-box
-        padding: .1rem
 
         .icons-icon-img-content
           display: block
-          margin: 0 auto
+          margin: .1rem auto 0 auto
           height: 90%
 
       .icons-icon-desc
@@ -120,5 +120,5 @@ export default {
         height: .44rem
         color: $darkTextColor
         text-align: center
-        ellipsis ()
+        ellipsis()
 </style>
