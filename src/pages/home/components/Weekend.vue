@@ -4,7 +4,7 @@
       <div class="weekend-title">周末去哪儿</div>
     </div>
     <ul>
-      <li class="weekend-item border-bottom" v-for="item of weekendList" :key="item.id">
+      <li class="weekend-item border-bottom" v-for="item of list" :key="item.id">
         <div class="weekend-item-img-wapper">
           <img class="weekend-item-img" :src="item.imgUrl" />
         </div>
@@ -20,20 +20,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      weekendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/f8/29dfa785277839.jpg_r_640x214_7d051523.jpg',
-        title: '阳江温泉知多少',
-        desc: '这里的天空和大海让人心旷神怡，配上舒缓的优美音乐，泡个暖暖的温泉岂不美哉'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg',
-        title: '浮在海上的绿洲',
-        desc: '南国滨海之城，避寒胜地，有暖暖的阳光，海风习习，吃着海鲜逛逛老街多惬意啊'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -48,7 +36,7 @@ export default {
   .weekend-item-img-wapper
     height 0
     overflow hidden
-    padding-bottom 33.9%
+    padding-bottom 36.64%
     .weekend-item-img
       width 100%
   .weekend-item-info

@@ -5,7 +5,7 @@
       <span>猜你喜欢</span>
     </div>
     <ul>
-      <li class="recommend-item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="recommend-item border-bottom" v-for="item of list" :key="item.id">
         <img class="recommend-item-img" :src="item.imgUrl" />
         <div class="recommend-item-info">
           <p class="recommend-item-info-title">{{item.title}}</p>
@@ -20,25 +20,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/15/15ca1d0eab6bf46c.water.jpg_200x200_50ca7bb1.jpg',
-        title: '东部华侨城大侠谷',
-        desc: '行走峡湾栈道，倾听大自然的天籁之音'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/15/15ca1d0eab6bf46c.water.jpg_200x200_50ca7bb1.jpg',
-        title: '东部华侨城大侠谷',
-        desc: '行走峡湾栈道，倾听大自然的天籁之音'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/15/15ca1d0eab6bf46c.water.jpg_200x200_50ca7bb1.jpg',
-        title: '东部华侨城大侠谷',
-        desc: '行走峡湾栈道，倾听大自然的天籁之音'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
