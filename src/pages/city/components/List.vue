@@ -66,7 +66,7 @@ export default {
     this.scroll = new Bscroll(this.$refs.cityList)
   }
 }
-
+</script>
 <style lang="stylus" scoped>
   .city-list
     position absolute
